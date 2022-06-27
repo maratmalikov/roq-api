@@ -7,7 +7,7 @@
 namespace roq {
 
 namespace detail {
-static const constexpr size_t MAX_LENGTH_SOURCE = 16;
+static const constexpr size_t MAX_LENGTH_SOURCE = 32;
 static const constexpr size_t MAX_LENGTH_USER = 16;
 
 static const constexpr size_t MAX_LENGTH_ACCOUNT = 32;
@@ -101,7 +101,7 @@ struct TimeZone final : public String<detail::MAX_LENGTH_TIME_ZONE> {
 
 // validate
 
-static_assert(sizeof(Source) == detail::MAX_LENGTH_USER);
+static_assert(sizeof(Source) == detail::MAX_LENGTH_SOURCE);
 static_assert(sizeof(User) == detail::MAX_LENGTH_USER);
 static_assert(sizeof(Account) == detail::MAX_LENGTH_ACCOUNT);
 static_assert(sizeof(Exchange) == detail::MAX_LENGTH_EXCHANGE);
